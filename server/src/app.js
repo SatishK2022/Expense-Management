@@ -14,9 +14,11 @@ app.use(morgan("dev"))
 
 // routes import
 import expenseRouter from "./routes/expense.routes.js"
+import categoryRouter from "./routes/category.routes.js"
 
 // routes decleration
 app.use("/api/v1/expense", expenseRouter)
+app.use("/api/v1/category", categoryRouter)
 
 
 app.get("/", (req, res) => {
